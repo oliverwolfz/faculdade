@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORA E CALCULADORA</title>
+</head>
+
+<style>
+        body {
+    background-image:url("https://wallpapers.com/images/hd/aesthetic-minimalist-blue-sky-oo7otz622h41z4s5.jpg");
+}
+
+h1 {
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+span{
+    color: black; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+</style>
+
+<center>
+<body>
+    
+    <div id="container">
+        <h1 id="greeting">Olá!</h1>
+        <span id="data"></span>
+    </div>
+
+    <script src="js/script.js"></script>
+
+
+    <h1>Calculadora de SOMA</h1>
+    <form>
+        <input type="text" name="valor1" id="valor1" placeholder="Digite o primeiro valor">
+        <br>
+        <input type="text" name="valor2" id="valor2" placeholder="Digite o segundo valor">
+        <br>
+        <input type="submit" value="calcular" onclick="calcular()">
+        <br>
+    </form>
+    <br>
+    <p>Resultado: <span id="resultado"></span></p>
+    <script>
+        function calcular() {
+            let n1 = parseFloat(document.getElementById("valor1").value);
+            let n2 = parseFloat(document.getElementById("valor2").value);
+            console.log('primeiro número: ' + n1);
+            console.log('segundo número: ' + n2);
+            let soma = n1+n2;
+            console.log('resultado: '+soma);
+            document.getElementById('resultado').innerHTML = soma;
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+</center>
+</html>
